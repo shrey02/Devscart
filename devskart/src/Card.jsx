@@ -1,5 +1,5 @@
-import React from 'react'
-
+import React from 'react';
+import "./Courses.css";
 export default function Card(props) {
     return (
         <div
@@ -20,7 +20,7 @@ export default function Card(props) {
                   <p class="card-text text-start">
                     {props.desc}
                     <h4>
-                      {props.price} <span>{props.cutprice}</span>
+                      {props.price} <span class="span">{props.cutprice}</span>
                     </h4>
                     <h3>{props.rating}</h3>
                   </p>

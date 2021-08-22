@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Navbar.css";
-import { auth} from './firebase';
+import { auth } from './firebase';
 import { useSelector, useDispatch } from 'react-redux';
 import {setUserLogoutState,selectUserName } from './features/userSlice';
 import SearchIcon from "@material-ui/icons/Search";
@@ -8,6 +8,7 @@ import { Button } from '@material-ui/core';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import AllInclusiveIcon from '@material-ui/icons/AllInclusive';
 import FavoriteIcon from '@material-ui/icons/Favorite';
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -23,19 +24,19 @@ const Navbar = () => {
         <div>
             <nav className="header">
                 <div className="title">
-                    <h2><span className="num">D</span>evskart <AllInclusiveIcon style={{fontSize: "35"}} /></h2>   
+                    <h2><span className="num">D</span>evsCart <AllInclusiveIcon style={{fontSize: "35"}} /></h2>   
                 </div>
 
                 <div className="categories">
+                <NavLink to="/" style={{textDecoration:'none',color:'black'}}> <div><span className="item">Home</span></div></NavLink> 
                     <div><span className="item">Categories</span></div>
-                    <div><span className="item">Business Categories</span></div>
-                    
+                    <div><span className="item">Accessories</span></div>
                 </div>
                 
-                <div className='header__center'>
-                    <input type="text" placeholder="Search for anything"/>
-                    <SearchIcon />
-                </div>
+                <div className="widgets__input">
+        <SearchIcon className="widgets__searchIcon" />
+        <input placeholder="Search DevsCart" type="text" />
+      </div>
                 <div className='header__right'>
                 <div>
                         <Button><AddShoppingCartIcon style={{fontSize: "30px"}} /></Button>

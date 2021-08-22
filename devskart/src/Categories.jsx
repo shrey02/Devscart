@@ -15,8 +15,11 @@ const Categories = () => {
     <div className="categories-card">
       <Grid container spacing={5}>
         <Grid item xs={6}>
+         
           <div className="img1">
+          <NavLink to="/and">
               <img className="categories-img" src="https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg?size=626&ext=jpg&ga=GA1.2.2074516007.1629158400" alt=""/>
+              </NavLink>
               <h2>Android Development</h2>
           </div>
         </Grid>

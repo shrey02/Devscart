@@ -4,6 +4,7 @@ import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled';
 import StarsIcon from '@material-ui/icons/Stars';
 import FourKIcon from '@material-ui/icons/FourK';
 import Categories from './Categories';
+import Card from './Card';
 
 
 const Home = () => {
@@ -16,6 +17,15 @@ const Home = () => {
             <div className="Wed-portion same">
                 <h3>Expand your career opportunities with Web Development</h3>
                 <p>Whether you work in machine learning or finance, or are pursuing a career in web development or data science, Python is one of the most important skills you can learn. Python's simple syntax is especially suited for desktop, web, and business applications. Python's design philosophy emphasizes readability and usability.</p>
+            <Card id= {Math.random() * 10}
+                src="https://img-c.udemycdn.com/course/240x135/625204_436a_3.jpg"
+                title= "Web Developer Bootcamp"
+                desc= "The only course you need to learn web development - HTML, CSS, JS, Node, and More!"
+                price= "₹385"
+                cutprice= "₹6,400"
+                rating= "★★★★★"
+                view= "https://www.udemy.com/course/the-web-developer-bootcamp/">
+            </Card>
             </div>
             <div className="App-portion same">
                 <h3>Expand your career opportunities with Web Development</h3>

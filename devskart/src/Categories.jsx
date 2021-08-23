@@ -10,7 +10,7 @@ const Categories = () => {
   return (
     <>
     <hr style={{backgroundColor: "lightgray"}}/>
-    <h1>Top Categories</h1>
+    <h1 id="categories">Top Categories</h1>
     <div className="container">
     <div className="categories-card">
       <Grid container spacing={5}>
@@ -41,7 +41,9 @@ const Categories = () => {
         </Grid>
         <Grid item xs={6}>
           <div className="img">
+          <NavLink to="/game">
               <img className="categories-img" src="https://www.duendev.com/wp-content/uploads/2021/05/istockphoto-1054541696-612x612-1.jpeg" alt=""/>
+              </NavLink>
               <h2>Game Development</h2>
           </div>
         </Grid>

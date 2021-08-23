@@ -12,12 +12,14 @@ import { NavLink } from 'react-router-dom';
 
 
 
-const Navbar = () => {
+const Navbar = ({setIslogin}) => {
   const dispatch = useDispatch();
   const username = useSelector(selectUserName);
   const handleSignOut = ()=>{
     auth.signOut().then(()=>{
       dispatch(setUserLogoutState());
+      setIslogin(null);
+      localStorage.setItem('name','');
     }).catch((err)=>alert(err.message))
   }
     return (
@@ -27,12 +29,12 @@ const Navbar = () => {
                     <h2><span className="num">D</span>evsCart <AllInclusiveIcon style={{fontSize: "35"}} /></h2>   
                 </div>
 
-                <div className="categories">
-                <NavLink to="/" style={{textDecoration:'none',color:'black'}}> <div><span className="item">Home</span></div></NavLink> 
-                    <div><span className="item">Categories</span></div>
+          <div className="categories"> 
+                <NavLink to="/home" style={{textDecoration:'none',color:'black'}}> <div><span className="item">Home</span></div></NavLink> 
+                <a href="#categories" style={{textDecoration:'none',color:'black'}}>   <div><span className="item">Categories</span></div> </a>
                     <div><span className="item">Accessories</span></div>
                 </div>
-                
+               
                 <div className="widgets__input">
         <SearchIcon className="widgets__searchIcon" />
         <input placeholder="Search DevsCart" type="text" />

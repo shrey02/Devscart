@@ -5,7 +5,7 @@ import StarsIcon from '@material-ui/icons/Stars';
 import FourKIcon from '@material-ui/icons/FourK';
 import Categories from './Categories';
 import Card from './Card';
-
+import Carousel_3D from './Carousel_3D';
 
 const Home = () => {
     return (
@@ -45,6 +45,7 @@ const Home = () => {
                     <h3>Learn at your own pace, with lifetime access at high Quality</h3>
                 </div>
             </div>
+            <Carousel_3D/>
             <div className="Game-portion same">
                 <h3>Expand your career opportunities with Web Development</h3>
                 <p>Whether you work in machine learning or finance, or are pursuing a career in web development or data science, Python is one of the most important skills you can learn. Python's simple syntax is especially suited for desktop, web, and business applications. Python's design philosophy emphasizes readability and usability.</p>

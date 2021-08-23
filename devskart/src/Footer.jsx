@@ -6,8 +6,8 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import ShopIcon from '@material-ui/icons/Shop';
-
 import './Footer.css';
+import { NavLink } from 'react-router-dom';
 
 function Footer() {
     return (
@@ -27,7 +27,7 @@ function Footer() {
                 </div>
                 <div className="col2">
                     <h2 style={{color: '#EEB76B'}}>Information</h2>
-                    <p className="line">About Us</p>
+                    <NavLink to="About" style={{textDecoration:'none',color:'white'}}><p className="line">About Us</p></NavLink>
                     <p className="line">Blogs</p>
                     <p className="line">Careers</p>
                     <p className="line">8 Bit Business</p>
@@ -37,7 +37,7 @@ function Footer() {
                     <h2 style={{color: '#EEB76B'}}>Helpful Links</h2>
                     <p className="line">Services</p>
                     <p className="line">Terms</p>
-                    <p className="line">Privacy Policy</p>
+                   <NavLink to="Privacy" style={{textDecoration:'none',color:'white'}}> <p className="line">Privacy Policy</p></NavLink>
                     <p className="line">Sitemap</p>
                 </div>
             </div>

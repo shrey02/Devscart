@@ -5,7 +5,7 @@ import Row from "./Row";
 import Card from "./Card";
 import Grid from '@material-ui/core/Grid';
 
-const Web = () => {
+const Web = ({product, setProduct}) => {
   const cards = [
     {
       id: Math.random() * 10,
@@ -141,6 +141,8 @@ const Web = () => {
           cutprice={cards[i].cutprice}
           rating={cards[i].rating}
           view={cards[i].view}
+          product={product} setProduct={setProduct}
+          type={1}
         />
         <Card
           key={cards[i + 1].id}
@@ -151,6 +153,8 @@ const Web = () => {
           cutprice={cards[i + 1].cutprice}
           rating={cards[i + 1].rating}
           view={cards[i + 1].view}
+          product={product} setProduct={setProduct}
+          type={1}
         />
         <Card
           key={cards[i + 2].id}
@@ -161,6 +165,8 @@ const Web = () => {
           cutprice={cards[i + 2].cutprice}
           rating={cards[i + 2].rating}
           view={cards[i + 2].view}
+          product={product} setProduct={setProduct}
+          type={1}
         />
         <Card
           key={cards[i + 3].id}
@@ -171,11 +177,13 @@ const Web = () => {
           cutprice={cards[i + 3].cutprice}
           rating={cards[i + 3].rating}
           view={cards[i + 3].view}
+          product={product} setProduct={setProduct}
+          type={1}
         />
       </Row>
     );
   }
-  if (cards.length % 4 == 1) {
+  if (cards.length % 4 === 1) {
     arr.push(
       <Row>
         <Card
@@ -187,10 +195,12 @@ const Web = () => {
           cutprice={cards[cards.length - 1].cutprice}
           rating={cards[cards.length - 1].rating}
           view={cards[cards.length - 1].view}
+          product={product} setProduct={setProduct}
+          type={1}
         />
       </Row>
     );
-  } else if (cards.length % 4 == 2) {
+  } else if (cards.length % 4 === 2) {
     arr.push(
       <Row>
         <Card
@@ -202,6 +212,8 @@ const Web = () => {
           cutprice={cards[cards.length - 2].cutprice}
           rating={cards[cards.length - 2].rating}
           view={cards[cards.length - 2].view}
+          product={product} setProduct={setProduct}
+          type={1}
         />
         <Card
           key={cards[cards.length - 1].id}
@@ -212,10 +224,12 @@ const Web = () => {
           cutprice={cards[cards.length - 1].cutprice}
           rating={cards[cards.length - 1].rating}
           view={cards[cards.length - 1].view}
+          product={product} setProduct={setProduct}
+          type={1}
         />
       </Row>
     );
-  } else if (cards.length % 4 == 3) {
+  } else if (cards.length % 4 === 3) {
     arr.push(
       <Row>
         <Card
@@ -227,6 +241,8 @@ const Web = () => {
           cutprice={cards[cards.length - 3].cutprice}
           rating={cards[cards.length - 3].rating}
           view={cards[cards.length - 3].view}
+          product={product} setProduct={setProduct}
+          type={1}
         />
         <Card
           key={cards[cards.length - 2].id}
@@ -237,6 +253,8 @@ const Web = () => {
           cutprice={cards[cards.length - 2].cutprice}
           rating={cards[cards.length - 2].rating}
           view={cards[cards.length - 2].view}
+          product={product} setProduct={setProduct}
+          type={1}
         />
         <Card
           key={cards[cards.length - 1].id}
@@ -247,6 +265,8 @@ const Web = () => {
           cutprice={cards[cards.length - 1].cutprice}
           rating={cards[cards.length - 1].rating}
           view={cards[cards.length - 1].view}
+          product={product} setProduct={setProduct}
+          type={1}
         />
       </Row>
     );

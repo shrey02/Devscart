@@ -10,7 +10,7 @@ const Categories = () => {
   return (
     <>
     <hr style={{backgroundColor: "lightgray"}}/>
-    <h1>Top Categories</h1>
+    <h1 id="categories">Top Categories</h1>
     <div className="container">
     <div className="categories-card">
       <Grid container spacing={5}>
@@ -35,7 +35,9 @@ const Categories = () => {
         </Grid>
         <Grid item xs={6}>
           <div className="img3">
-              <img className="categories-img" src="https://i.pinimg.com/originals/22/29/ab/2229ab619400f9e376604b98249a8eda.jpg" alt=""/>
+          <NavLink to="/accessories">
+          <img className="categories-img" src="https://i.pinimg.com/originals/22/29/ab/2229ab619400f9e376604b98249a8eda.jpg" alt=""/>
+              </NavLink>
               <h2>Accessories</h2>
           </div>
         </Grid>

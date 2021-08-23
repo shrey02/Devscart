@@ -3,7 +3,12 @@ import "./Land.css";
 import { auth , provider } from './firebase';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectUserName,selectUserEmail,setActiveUser } from './features/userSlice';
-const Landing = () => {
+import {useState} from 'react';
+
+
+
+const Landing = ({setIslogin}) => {
+  
     const dispatch = useDispatch();
     const useremail = useSelector(selectUserEmail);
     const username = useSelector(selectUserName);
@@ -13,6 +18,10 @@ const Landing = () => {
              userName:result.user.displayName,
              userEmail:result.user.email
            }))
+           
+           localStorage.setItem("name","login");
+           setIslogin(localStorage.name)
+           console.log(localStorage.name)
         })
       }
   
@@ -45,6 +54,7 @@ const Landing = () => {
 </div>
     );
 }
+
 export default Landing;
 
 // var NewComponent = React.createClass({//     render: function() {//       return (

@@ -1,6 +1,4 @@
 import React from "react";
-import "./Courses.css";
-
 import { Link } from "react-router-dom";
 
 export default function Card(props) {
@@ -9,21 +7,21 @@ export default function Card(props) {
       className="col-xs-12 col-sm-6 col-md-5 col-lg-3"
       id="cards_landscape_wrap-2"
     >
-      <div className="card-flyer">
-        <div className="image-box">
+      <div class="card-flyer" style={{ height: 430 }}>
+        <div class="image-box">
           <img
-            className="card-img-top"
+            class="card-img-top"
             src={props.src}
             alt="Card"
             height="200px"
+            style={{ height: 230 }}
           />
         </div>
-        <div className="card-body text-container">
-          <h5 className="card-title text-start">{props.title}</h5>
-          <p className="card-text text-start">
-            {props.desc}
+        <div class="card-body text-container">
+          <h5 class="card-title text-start">{props.title}</h5>
+          <p class="card-text text-start">
             <h4>
-              {props.price} <span className="span">{props.cutprice}</span>
+              {props.price} <span>{props.cutprice}</span>
             </h4>
             <h3>{props.rating}</h3>
           </p>

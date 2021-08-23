@@ -33,10 +33,10 @@
     cursor: pointer; 
     font-weight: 500;
 }
-.item {
+.nav_item {
     padding: 10px;
 }
-.item:hover {
+.nav_item:hover {
     background-color: #7C83FD;
     opacity: 0.5;
     border-radius: 100px;
